@@ -40,4 +40,6 @@ source lib/packages
 source lib/post
 source lib/symlinks
 
+source ~/.zshrc
+
 e_success "All done!"

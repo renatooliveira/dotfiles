@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+
+e_arrow 'Installing packages'
+
+sudo apt-get -qq update
+sudo apt-get -qq install \
+python-dev \
+gnome-do \
+curl \
+htop \
+zsh \
+mpg123 \
+aptitude \
+ack-grep \
+terminator \
+ffmpeg \
+make \
+build-essential \
+autoconf \
+tree \

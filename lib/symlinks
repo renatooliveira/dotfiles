@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+
+e_arrow "Symlinking dotfiles"
+
+for FILE in `find -L dotfiles -maxdepth 1 -printf '%P\n'`; do
+  unlink ~/.$FILE > /dev/null 2>&1
+  ln -sf `pwd`/dotfiles/$FILE ~/.$FILE
+done
+
+e_arrow "Symlinking resources"
+unlink ~/.resources > /dev/null 2>&1
+ln -sf `pwd`/resources ~/.resources

@@ -1,0 +1,43 @@
+#!/usr/bin/env bash
+
+source lib/util
+
+echo '   __ _          __  __ '
+echo '  / _\ |_ _   _ / _|/ _|'
+echo '  \ \| __| | | | |_| |_ '
+echo '  _\ \ |_| |_| |  _|  _|'
+echo '  \__/\__|\__,_|_| |_|  '
+echo ''
+
+# TODO: decide here on which machine we are running
+# Possible options
+#  1. Ubuntu server (only install dotfiles)
+#  2. Ubuntu desktop (dotfiles + gui packages and shit)
+#  3. Mac (mac shit)
+
+# TODO:
+# 1. consider using vundle with submodules
+# 2. automatic dropbox installation
+# 3. faenza-icons
+# 4. flags for partial installation --full, --compact
+#  * ruby
+#  * gems:
+#    pry pry-doc logger logger-colors rails
+#    rspec cucumber mechanize boom
+
+# TODO:
+# Optional WM installation
+
+e_arrow "Starting installation process"
+
+# Ask for the administrator password upfront
+sudo -v
+
+# Keep-alive: update existing `sudo` time stamp until `install` has finished
+while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
+
+source lib/packages
+source lib/post
+source lib/symlinks
+
+e_success "All done!"

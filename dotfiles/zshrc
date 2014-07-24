@@ -67,3 +67,7 @@ function subl(){ ( sublime $1 & ) }
 
 # z - awesome shit!
 . ~/.resources/bin/z
+
+export WORKON_HOME=$HOME/.virtualenvs
+export PROJECT_HOME=$HOME/workspace
+export VIRTUALENVWRAPPER_SCRIPT=/usr/local/bin/virtualenvwrapper.sh

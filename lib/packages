@@ -13,7 +13,6 @@ mpg123 \
 aptitude \
 ack-grep \
 terminator \
-ffmpeg \
 make \
 build-essential \
 autoconf \

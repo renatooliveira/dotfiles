@@ -9,7 +9,7 @@ mkdir -p /home/renato/Programs
 
 
 ## SUBLIME TEXT 
-if [ -d "$HOME/Programs/Sublime\ Text\ 2/" ]; then
+if [ -d "$HOME/Programs/Sublime Text 2" ]; then
   e_success 'Sublime text is already installed'
 else
   e_arrow 'Installing sublime_text'
@@ -37,7 +37,7 @@ if [ -d "$HOME/.oh-my-zsh" ]; then
   e_already 'oh-my-zsh'
 else
   e_arrow 'Installing oh-my-zsh'
-  curl -Ls https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh | sh > /dev/null 2>&1
+  curl -L http://install.ohmyz.sh | sh > /dev/null 2>&1
 fi
 
 #===========================================================
